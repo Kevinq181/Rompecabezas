@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Rompecabezas</title>
+  	<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+  
+      <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+	<div id="inicio">
+		
+
+
+	</div>
+
+
+
+	<div id="contenedor" style="display: none">
+	<div class="puntuacion">
+		<p></p>
+		<p id="tiempo"><span id="minutos">00</span>:<span id="segundos">00</span></p>
+	</div>
+
+	<div id="piezas">
+		<p>
+			P<br>
+			I<br>
+			E<br>
+			Z<br>
+			A<br>
+			S<br>
+
+		</p>
+	</div>
+  	<svg width="700" height="650" id="entorno">
+
+		<g id="fondo"><image xlink:href= "images/fondo.png" width="500" height="500" x="200" y="100"></g>
+		<g class="padre" id="0"><image xlink:href="images/1.png" class="movil"></g>
+		<g class="padre" id="1"><image xlink:href="images/2.png" class="movil"></g>
+		<g class="padre" id="2"><image xlink:href="images/3.png" class="movil"></g>
+		<g class="padre" id="3"><image xlink:href="images/4.png" class="movil"></g>
+		<g class="padre" id="4"><image xlink:href="images/5.png" class="movil"></g>	
+		<g class="padre" id="5"><image xlink:href="images/6.png" class="movil"></g>
+		<g class="padre" id="6"><image xlink:href="images/7.png" class="movil"></g>
+		<g class="padre" id="7"><image xlink:href="images/8.png" class="movil"></g>
+		<g class="padre" id="8"><image xlink:href="images/9.png" class="movil"></g>
+	</svg>
+
+
+	<p id="inf">Tiempo</p>
+	<img id="reloj" src="images/reloj.png">
+
+	<p id="escritura"></p>
+	<img id="pizarra" src="images/pizarra.png">
+	</div>
+
+	<audio id="win" src="sounds/sn1.mp3"></audio>
+	<script  src="js/cronometro.js"></script>
+    <script  src="js/iniciarCronometro.js"></script>
+    <script  src="js/js1.js"></script>
+
+
+</body>
+
+</html>
