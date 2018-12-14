@@ -6,7 +6,6 @@ var tamWidh = [165,260,164,211,215,255,165,260,164];
 var tamHeight = [210,198,211,165,260,160,210,198,211];
 
 
-
 for(var i=0;i<piezas.length;i++){
 	piezas[i].setAttribute("width", tamWidh[i]);
 	piezas[i].setAttribute("height",tamHeight[i]);
@@ -51,11 +50,10 @@ function deseleccionarElemento(evt){
 		elementSelect.removeAttribute("onmousemove");
 		elementSelect.removeAttribute("onmouseout");
 		elementSelect.removeAttribute("onmouseup");
-		
-	}
 		elementSelect = 0;
+	}
+		
 }
-
 
 var entorno = document.getElementById('entorno');
 
