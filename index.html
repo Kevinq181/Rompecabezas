@@ -5,22 +5,14 @@
   <meta charset="UTF-8">
   <title>Rompecabezas</title>
   	<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-  
       <link rel="stylesheet" href="css/style.css">
-
+      
 </head>
 
 <body>
-
-	<div id="inicio">
 		
 
-
-	</div>
-
-
-
-	<div id="contenedor" style="display: none">
+	<div id="contenedor" style="display: none" >
 	<div class="puntuacion">
 		<p></p>
 		<p id="tiempo"><span id="minutos">00</span>:<span id="segundos">00</span></p>
@@ -37,7 +29,7 @@
 
 		</p>
 	</div>
-  	<svg width="700" height="650" id="entorno">
+  	<svg width="700" height="620" id="entorno">
 
 		<g id="fondo"><image xlink:href= "images/fondo.png" width="500" height="500" x="200" y="100"></g>
 		<g class="padre" id="0"><image xlink:href="images/1.png" class="movil"></g>
@@ -52,18 +44,34 @@
 	</svg>
 
 
+
 	<p id="inf">Tiempo</p>
 	<img id="reloj" src="images/reloj.png">
 
 	<p id="escritura"></p>
 	<img id="pizarra" src="images/pizarra.png">
 	</div>
-
+	<audio id="correcta" src="sounds/sn2.mp3"></audio>
+	<audio id="incorrecta" src="sounds/sn3.mp3"></audio>
 	<audio id="win" src="sounds/sn1.mp3"></audio>
 	<script  src="js/cronometro.js"></script>
     <script  src="js/iniciarCronometro.js"></script>
     <script  src="js/js1.js"></script>
 
+    <div id="completado" style="display: none">
+    	<img src="images/fondo.png">
+    </div>
+   
+    <div id="inicial">
+
+		<img src="images/inicio.png" id="inicio">
+	
+		<ul>
+			<li><a onclick="mostarInicio()">¡Vamos alla!</a></li>
+			<li><a onclick="mostarInicio()">¡Elegir nivel!</a></li>
+
+		</ul>
+	</div>
 
 </body>
 

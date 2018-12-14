@@ -6,8 +6,7 @@ var cronometro;
 
 
 function iniciar() {
-	//resetear();
+	
 	empezar();
 	
 }
-iniciar();

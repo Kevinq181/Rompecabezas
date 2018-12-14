@@ -13,6 +13,7 @@ for(var i=0;i<piezas.length;i++){
 	piezas[i].setAttribute("x", Math.floor((Math.random() * 10) + 1));
 	piezas[i].setAttribute("y", Math.floor((Math.random() * 409) + 1));
 	piezas[i].setAttribute("onmousedown","seleccionarElemento(evt)");
+
 }
 
 var elementSelect = 0;  
@@ -50,9 +51,11 @@ function deseleccionarElemento(evt){
 		elementSelect.removeAttribute("onmousemove");
 		elementSelect.removeAttribute("onmouseout");
 		elementSelect.removeAttribute("onmouseup");
-		elementSelect = 0;
+		
 	}
+		elementSelect = 0;
 }
+
 
 var entorno = document.getElementById('entorno');
 
@@ -78,7 +81,9 @@ function iman(){
 }
 			
 var win = document.getElementById("win");
-var hola = document.getElementById("escritura");
+var correcta01 = document.getElementById("correcta");
+var incorrecta = document.getElementById("incorrecta");
+var mensaje = document.getElementById("escritura");
 function testing() {
 	var bien_ubicada = 0;
 	var padres = document.getElementsByClassName('padre');
@@ -88,18 +93,36 @@ function testing() {
 		ide = padres[i].getAttribute("id");
 		if(origX[ide] == posx && origY[ide] == posy){
 			bien_ubicada = bien_ubicada + 1;
-			hola.innerHTML = "¡Pieza Correcta!";
-			console.log (bien_ubicada);
+			mensaje.innerHTML = "¡Pieza Correcta!";
+			correcta01.play();
+			incorrecta.pause();
+
 		}else{
-			hola.innerHTML = "¡Intentalo <br> <t>de <br> nuevo!";
+			mensaje.innerHTML = "¡Intentalo <br> <t>de <br> nuevo!";
+			incorrecta.play();
+			correcta01.pause();
 		}
 	}
 	if(bien_ubicada == 9){
-		hola.innerHTML = "¡Completado!";
+		mensaje.innerHTML = "¡Completado!";
 		win.play();
-
+		ocultarNivel1();
 	}
 }
+
+
+function mostarInicio(){
+	iniciar();
+	$("#contenedor").fadeIn(2000);
+	document.getElementById("inicial").style.display= "none";
+}
+
+function ocultarNivel1(){
+	$("#completado").fadeIn(2000);
+	document.getElementById("contenedor").style.display = "none";
+	resetear();
+}
+
 
 
 
