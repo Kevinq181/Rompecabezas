@@ -82,6 +82,7 @@ var win = document.getElementById("win");
 var correcta01 = document.getElementById("correcta");
 var incorrecta = document.getElementById("incorrecta");
 var mensaje = document.getElementById("escritura");
+
 function testing() {
 	var bien_ubicada = 0;
 	var padres = document.getElementsByClassName('padre');
@@ -102,23 +103,11 @@ function testing() {
 		}
 	}
 	if(bien_ubicada == 9){
-		mensaje.innerHTML = "¡Completado!";
+		//mensaje.innerHTML = "¡Completado!";
 		win.play();
 		ocultarNivel1();
+		
 	}
-}
-
-
-function mostarInicio(){
-	iniciar();
-	$("#contenedor").fadeIn(2000);
-	document.getElementById("inicial").style.display= "none";
-}
-
-function ocultarNivel1(){
-	$("#completado").fadeIn(2000);
-	document.getElementById("contenedor").style.display = "none";
-	resetear();
 }
 
 

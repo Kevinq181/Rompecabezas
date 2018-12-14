@@ -1,8 +1,5 @@
 
-function resetear(){
-	clearInteval(cronometro);
 
-}
 
 function empezar(){
 
@@ -30,6 +27,11 @@ function empezar(){
 		total_minutos = auxm;
 
 	},1000);
+
+}
+
+function resetear(){
+	clearInteval(cronometro);
 
 }
 

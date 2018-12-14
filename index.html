@@ -54,21 +54,27 @@
 	<script  src="js/cronometro.js"></script>
     <script  src="js/iniciarCronometro.js"></script>
     <script  src="js/js1.js"></script>
+    <script  src="js/funcionesPresentacion.js"></script>
 
-    <div id="completado" style="display: none">
-    	<img src="images/fondo.png">
-    </div>
-   
     <div id="inicial">
 
 		<img src="images/inicio.png" id="inicio">
 	
 		<ul>
-			<li><a onclick="mostarInicio()">¡Vamos alla!</a></li>
-			<li><a onclick="mostarInicio()">¡Elegir nivel!</a></li>
+			<li><a onclick="nivel1()">¡Empezar!</a></li>
+			<!--li><a onclick="inicial()">¡Elegir nivel!</a></li-->
 
 		</ul>
 	</div>
+
+    <div id="completado" style="display: none">
+    	<img src="images/fondo.png" id="completado1">
+    	<p id="mensaje01">hola</p>
+    	<ul id="menu01">
+			<li><a onclick="nivel1()">¡Siguiente Nivel!</a></li>
+			<li><a onclick="inicial()">¡Menú Principal!</a></li>
+		</ul>
+    </div>
 
 </body>
 
