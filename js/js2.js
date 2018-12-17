@@ -1,9 +1,7 @@
-/*Programacion de JavaScript*/
-
 var piezas = document.getElementsByClassName('movil');
 
-var tamWidh = [165,260,164,211,215,255,165,260,164];
-var tamHeight = [210,198,211,165,260,160,210,198,211];
+var tamWidh = [167.5,215,265,168,218,216,203,216,218,217.5,168,216];
+var tamHeight = [300,310,360,240,300,300,217.5,228,299,324,362,290];
 
 
 for(var i=0;i<piezas.length;i++){
@@ -45,6 +43,7 @@ function moverElemento(evt){
 }
 
 function deseleccionarElemento(evt){
+
 	testing();
 	if(elementSelect != 0){			
 		elementSelect.removeAttribute("onmousemove");
@@ -66,8 +65,8 @@ function reordenar(evt){
 	return entorno.lastChild.firstChild;
 }
 
-var origX = [202,320,532,203,343,462,202,320,532];   
-var origY = [103,85,103,267,220,270,387,417,385];
+var origX = [205,333,505,728,205,380,536,680,205.5,380.5,554,680.2];   
+var origY = [-19.5, -24, -25, 35.5, 156,130,221,190,330,293,298,310.1];
 
 function iman(){
 	for(var i=0;i<piezas.length;i++){
@@ -106,16 +105,13 @@ function testing() {
 		
 	}
 	
-	if(bien_ubicada == 9){
-		mensaje02();
+	if(bien_ubicada == 12){
+		mensaje01();
 		win.play();
-		ocultarNivel1();
+		ocultarNivel2();
+		
 		
 	}
 }
-
-
-
-
 
 

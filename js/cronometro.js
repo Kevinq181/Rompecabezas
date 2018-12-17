@@ -1,6 +1,4 @@
 
-
-
 function empezar(){
 
 	segundos = 0;
@@ -29,12 +27,6 @@ function empezar(){
 	},1000);
 
 }
-
-function resetear(){
-	clearInteval(cronometro);
-
-}
-
 
 
 

@@ -1,17 +1,10 @@
 
 
-function nivel1(){
-	$("#contenedor").toggle(1000);
-	document.getElementById("inicial").style.display= "none";
-	document.getElementById("loader").style.display= "none";
-	iniciar();
-}
-
-function ocultarNivel1(){
+function ocultarNivel2(){
 	document.getElementById("contenedor").style.display = "none";
-	document.getElementById("instrucciones").style.display = "none";
 	$("#completado").fadeIn(1000);
 	mensaje01();
+	mensaje02();
 	setTimeout(function(){degradado()}, 3000);
 	
 	//document.getElementById("completado").style.display= "none";
@@ -23,7 +16,7 @@ function degradado(){
 }
 
 function inicial(){
-	location.reload();
+	location.href="../index.html";;
 	
 }
 
@@ -38,4 +31,8 @@ function mensaje02(){
 	mensaje02.innerHTML = "Su tiempo= " + total_minutos + ":" + total_segundos;
 }
 
+function instrucciones(){
+	var instrucciones = document.getElementById("instrucciones");
+	
 
+}
