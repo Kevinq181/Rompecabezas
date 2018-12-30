@@ -2,8 +2,8 @@
 
 var piezas = document.getElementsByClassName('movil');
 
-var tamWidh = [165,260,164,211,215,255,165,260,164];
-var tamHeight = [210,198,211,165,260,160,210,198,211];
+var tamWidh = [167,265,165,304.5,162.5,305.5,167,456,165];
+var tamHeight = [304,409.5,300,171.5,477.5,171,304,162.1,300];
 
 
 for(var i=0;i<piezas.length;i++){
@@ -66,8 +66,8 @@ function reordenar(evt){
 	return entorno.lastChild.firstChild;
 }
 
-var origX = [202,320,532,203,343,462,202,320,532];   
-var origY = [103,85,103,267,220,270,387,417,385];
+var origX = [202,318,533.5,158.5,370,438.5,202,223,533.5];   
+var origY = [58,-22,59.5,264.5,111.5,265,340,437.5,342];
 
 function iman(){
 	for(var i=0;i<piezas.length;i++){
