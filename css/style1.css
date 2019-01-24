@@ -2,8 +2,9 @@
 
 #contenedor{
 	position: absolute;
-	left: 120px;
-	top: 10px;
+	align-items: center;
+    left: 9%;
+	top: 1%;
 }
 
 .puntuacion{
@@ -178,6 +179,7 @@ body{
 
 
 #menu2{
+    text-align: center;
 	padding: 15px 15px;
  	border: black 5px solid;
  	border-top-left-radius: 20px;
@@ -279,8 +281,8 @@ body{
 	font-family: 'Amatic SC', cursive;
 	font-size: 45px;
 	position: absolute;
-	left: 100px;
-	top: 63px;	
+	left: 93px;
+	top: 65px;	
 	/*text-shadow: -2px -2px 0 #ff4900, 2px -2px 0 #ff4900,-2px 2px 0 #ff4900, 2px 2px 0 #ff4900;  */   
 	font-family: 'Amatic SC', cursive; 
 	font-size: 38px;   

@@ -30,9 +30,3 @@ function mensaje02(){
 	var mensaje02 = document.getElementById("mensaje02");
 	mensaje02.innerHTML = "Su tiempo= " + total_minutos + ":" + total_segundos;
 }
-
-function instrucciones(){
-	var instrucciones = document.getElementById("instrucciones");
-	
-
-}
