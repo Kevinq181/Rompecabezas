@@ -15,11 +15,11 @@ function degradado() {
     //$("#completado1").fadeOut(10000);
 }
 
-function inicial() {
+/*function inicial() {
     location.reload();
 
 }
-
+*/
 function mensaje01() {
     var mensajeCompletado = document.getElementById("mensaje01");
     mensajeCompletado.innerHTML = "¡Completado!";
