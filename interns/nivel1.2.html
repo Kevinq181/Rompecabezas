@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <title>Rompecabezas1</title>
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
-        <link rel="stylesheet" href="../css/style.css">
-        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Rompecabezas1</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/stylePiezas9.css">
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
 </head>
 
-<body onload="iniciar()">
+<body onload="empezar()">
 
     <div id="contenedor">
         <div class="puntuacion">
@@ -27,9 +27,8 @@
                 S<br>
             </p>
         </div>
-        <svg width="700" height="620" id="entorno">
-
-				<g id="fondo"><image xlink:href= "../images/imgs1.2/fondo.png" width="500" height="500" x="200" y="100"></g>
+        <svg width="700" height="560" id="entorno">
+				<g id="fondo"><image xlink:href= "../images/imgs1.2/fondo.png" width="500" height="500" x="200" y="30"></g>
 				<g class="padre" id="0"><image xlink:href="../images/imgs1.2/1.png" class="movil"></g>
 				<g class="padre" id="1"><image xlink:href="../images/imgs1.2/2.png" class="movil"></g>
 				<g class="padre" id="2"><image xlink:href="../images/imgs1.2/3.png" class="movil"></g>
@@ -39,7 +38,7 @@
 				<g class="padre" id="6"><image xlink:href="../images/imgs1.2/7.png" class="movil"></g>
 				<g class="padre" id="7"><image xlink:href="../images/imgs1.2/8.png" class="movil"></g>
 				<g class="padre" id="8"><image xlink:href="../images/imgs1.2/9.png" class="movil"></g>
-			</svg>
+        </svg>
 
         <p id="inf">Tiempo</p>
         <img id="reloj" src="../images/reloj.png">
@@ -52,28 +51,23 @@
         </ul>
         <audio id="correcta" src="../sounds/sn2.mp3"></audio>
         <audio id="incorrecta" src="../sounds/sn3.mp3"></audio>
-        <audio id="win" src="../sounds/sn1.mp3"></audio>
+        <audio id="win" src="../sounds/snInicial.wav"></audio>
     </div>
-                    
+
     <div id="completado" style="display: none">
-	    	<img src="../images/imgs1.2/fondo.png" id="completado1">
-	    	<p id="mensaje01"></p>
-	    	<div id="vineta_tiempo">
-	    		<img src="../images/vineta.png">
-	    		<p id="mensaje02"></p>
-	    	</div>
-
-	    	
-	    	<ul id="menu2">
-                <li><a href="elegirNiveles.html">¡Elegir nivel!</a></li>
-				<li><a href="../index.html">¡Menú Principal!</a></li>
-			</ul>
-
-	   </div>
-    <script  src="../js/js1.js"></script>
-    <script  src="../js/cronometro.js"></script>
-    <script  src="../js/iniciarCronometro.js"></script>
-    <script  src="../js/funcionesPresentacion.js"></script>
-
+        <img src="../images/imgs1.2/fondo.png" id="completado1">
+        <p id="mensaje01"></p>
+        <div id="vineta_tiempo">
+            <img src="../images/vineta.png">
+            <p id="mensaje02"></p>
+        </div>
+        <ul id="menu2">
+            <li><a href="niveles.html">¡Elegir nivel!</a></li>
+            <li><a href="../index.html">¡Menú Principal!</a></li>
+        </ul>
+    </div>
+    <script src="../js/moverPiezas9.js"></script>
+    <script src="../js/cronometro.js"></script>
+    <script src="../js/resultados.js"></script>
 </body>
 </html>

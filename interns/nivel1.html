@@ -1,22 +1,26 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <title>Rompecabezas1</title>
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
-        <link rel="stylesheet" href="../css/style.css">
-        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Rompecabezas1</title>
+    <!--Link de fuente utilizada-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <!--Referencia al archivo .css-->
+    <link rel="stylesheet" href="../css/stylePiezas9.css">
+    <!--Script para utilización de jquery-->
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
 </head>
 
-<body onload="iniciar()">
-
+<!--Cargar funcion empezar() del archivo cronometro.js-->
+<body onload="empezar()">
     <div id="contenedor">
+        <!--Parte del conometro que aumenta continuamente-->
         <div class="puntuacion">
             <p></p>
             <p id="tiempo"><span id="minutos">00</span>:<span id="segundos">00</span></p>
         </div>
-
+        
         <div id="piezas">
             <p>
                 P<br>
@@ -27,9 +31,12 @@
                 S<br>
             </p>
         </div>
-        <svg width="700" height="620" id="entorno">
-
-				<g id="fondo"><image xlink:href= "../images/fondo.png" width="500" height="500" x="200" y="100"></g>
+        <!--Entorno con dimensiones definidas para insertar imagenes del rompecabezas-->
+        <!--Nota: matener la estructura definida para las etiquetas svg-->
+        <svg width="700" height="560" id="entorno">
+                <!--Imagen guía del rompecabezas 70px le quitè-->
+				<g id="fondo"><image xlink:href= "../images/fondo.png" width="500" height="500" x="200" y="30"></g> 
+                <!--Imagenes de cada pieza del rompecabezas-->
 				<g class="padre" id="0"><image xlink:href="../images/imgs1/1.png" class="movil"></g>
 				<g class="padre" id="1"><image xlink:href="../images/imgs1/2.png" class="movil"></g>
 				<g class="padre" id="2"><image xlink:href="../images/imgs1/3.png" class="movil"></g>
@@ -39,42 +46,43 @@
 				<g class="padre" id="6"><image xlink:href="../images/imgs1/7.png" class="movil"></g>
 				<g class="padre" id="7"><image xlink:href="../images/imgs1/8.png" class="movil"></g>
 				<g class="padre" id="8"><image xlink:href="../images/imgs1/9.png" class="movil"></g>
-			</svg>
-
+        </svg>
+                    
+        <!--Parte de información del tiempo transcurrido-->
         <p id="inf">Tiempo</p>
         <img id="reloj" src="../images/reloj.png">
-
+        <!--Parte en la que se muestra los mensajes de piezas correctas e incorrectas-->
         <p id="escritura"></p>
         <img id="pizarra" src="../images/pizarra.png">
-
+        <!--Menú-->
         <ul id="nivel1_menu">
             <li><a href="../index.html">¡Menú Principal!</a></li>
-        </ul>
+        </ul>   
+        <!--Sonidos del juego-->
         <audio id="correcta" src="../sounds/sn2.mp3"></audio>
         <audio id="incorrecta" src="../sounds/sn3.mp3"></audio>
-        <audio id="win" src="../sounds/sn1.mp3"></audio>
+        <audio id="win" src="../sounds/snInicial.wav"></audio>
     </div>
-                    
+    <!--Contenido que se presenta luego de haber completado cada rompecabezas-->               
     <div id="completado" style="display: none">
+            <!--Imagen completa-->
 	    	<img src="../images/fondo.png" id="completado1">
 	    	<p id="mensaje01"></p>
+            <!--Presentación del tiempo total-->
 	    	<div id="vineta_tiempo">
 	    		<img src="../images/vineta.png">
 	    		<p id="mensaje02"></p>
 	    	</div>
-
-	    	
+            <!--Menú con diferentes opciones-->
 	    	<ul id="menu2">
 				<li><a href="nivel1.1.html">¡Continuar!</a></li>
-                <li><a href="elegirNiveles.html">¡Elegir nivel!</a></li>
+                <li><a href="niveles.html">¡Elegir nivel!</a></li>
 				<li><a href="../index.html">¡Menú Principal!</a></li>
 			</ul>
-
-	   </div>
-    <script  src="../js/js1.js"></script>
+	   </div>  
+    <!--Scripts utilizados para todo el contenido del rompecabezas-->
+    <script  src="../js/moverPiezas9.js"></script>
     <script  src="../js/cronometro.js"></script>
-    <script  src="../js/iniciarCronometro.js"></script>
-    <script  src="../js/funcionesPresentacion.js"></script>
-
+    <script  src="../js/resultados.js"></script>
 </body>
 </html>
