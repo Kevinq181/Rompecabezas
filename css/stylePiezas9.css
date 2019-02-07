@@ -11,6 +11,8 @@ body {
 #entorno {
     display: block;
     top: 5%;
+    width: 700px;
+    height: 560px;
     margin: 0 auto;
     background-color: white;
     padding: 3px 10px;
@@ -23,6 +25,7 @@ body {
 
 #fondo {
     opacity: 0.2;
+    
 
 }
 
@@ -316,7 +319,7 @@ body {
     }
 }
 
-@media screen and (min-width: 1000px) and (max-width: 1000px) and (device-height: 500px) {
+@media screen and (min-width: 1000px) and (max-width: 1000px) and (device-height: 500px){
     body {
         background-image: url("../images/back.jpg");
         background-repeat: no-repeat;
